@@ -8,11 +8,11 @@ def main():
 		sys.exit(1)
 	t = sys.argv[1]
 	# Passing a dictionary
-    dict_data = {'user': 'admin', 'pass': 'admin'}
-    r = requests.post('https://%s/login.php' % t , data = dict_data)
+	dict_data = {'user': 'admin', 'pass': 'admin'}
+	r = requests.post('https://%s/login.php' % t , data = dict_data)
 	# Passing a string 
-    #headers = {'Content-Type': 'application/x-www-form-urlencoded'}
-    #str_data = "user=admin&pass=admin;"    
+	#headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+	#str_data = "user=admin&pass=admin;"    
 	#r = requests.post('https://%s/login.php' % t , headers = headers, data = str_data)
 	
 

